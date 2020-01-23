@@ -1,0 +1,5 @@
+//la sintesi sottrattiva è modello di sintesi  che viene filtrata.
+import("stdfaust.lib");
+
+cutoff=vslider("cat-of [style:knob]",1000,20,20000,1);
+process = fi.lowpass (2,cutoff) : fi.highpass (2,cutoff);
